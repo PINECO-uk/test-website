@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, FolderKanban, LineChart } from "lucide-react";
+import { FolderKanban, Heart, GraduationCap, MessageCircle } from "lucide-react";
 import consultingImage from "@/assets/strategy-consulting.jpg";
 import trainingImage from "@/assets/training-workshop.jpg";
 import projectImage from "@/assets/project-coordination.jpg";
@@ -7,28 +7,28 @@ import heroImage from "@/assets/hero-consultancy.jpg";
 
 const services = [
   {
-    icon: Briefcase,
-    title: "Strategic Consultancy",
-    description: "Expert guidance on business strategy, organisational development, and operational efficiency to drive growth.",
-    image: consultingImage,
-  },
-  {
-    icon: GraduationCap,
-    title: "Professional Training",
-    description: "Tailored training programmes that build skills, enhance performance, and empower your workforce.",
-    image: trainingImage,
-  },
-  {
     icon: FolderKanban,
     title: "Project Coordination",
-    description: "End-to-end project management ensuring timely delivery, stakeholder alignment, and quality outcomes.",
+    description: "Social and strategic projects — local and international. From design and planning to evaluation and reporting, delivered in Agile methodology.",
     image: projectImage,
   },
   {
-    icon: LineChart,
-    title: "Performance Analytics",
-    description: "Data-driven insights and KPI frameworks to measure impact and optimise your operations.",
+    icon: Heart,
+    title: "Volunteering Management",
+    description: "Plan and implement a customised volunteering strategy from the early stages. Includes training of new volunteer coordinators.",
     image: heroImage,
+  },
+  {
+    icon: GraduationCap,
+    title: "Training",
+    description: "Online and offline training sessions for organisations and groups, with select courses open for individual sign-up.",
+    image: trainingImage,
+  },
+  {
+    icon: MessageCircle,
+    title: "Consulting",
+    description: "Individual sessions to take your organisation to the next level — volunteering, funding opportunities, onboarding, AI workflow, and strategy.",
+    image: consultingImage,
   },
 ];
 
@@ -46,7 +46,7 @@ const ServiceCards = () => {
             Our <span className="text-gradient-primary">Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive solutions tailored to your business needs
+            Tailored solutions for organisations ready to grow, optimise, and make an impact
           </p>
         </motion.div>
 
