@@ -1,33 +1,33 @@
 import { motion } from "framer-motion";
-import { Bed, Sun, Sparkles, GraduationCap } from "lucide-react";
-import heroImage from "@/assets/hero-dog.jpg";
-import spaImage from "@/assets/spa-dog.jpg";
-import daycareImage from "@/assets/daycare-dogs.jpg";
-import suiteImage from "@/assets/luxury-suite.jpg";
+import { Briefcase, GraduationCap, FolderKanban, LineChart } from "lucide-react";
+import consultingImage from "@/assets/strategy-consulting.jpg";
+import trainingImage from "@/assets/training-workshop.jpg";
+import projectImage from "@/assets/project-coordination.jpg";
+import heroImage from "@/assets/hero-consultancy.jpg";
 
 const services = [
   {
-    icon: Bed,
-    title: "Luxury Boarding",
-    description: "Private suites with premium bedding, daily activities, and personalized care for overnight stays.",
-    image: suiteImage,
-  },
-  {
-    icon: Sun,
-    title: "Doggy Daycare",
-    description: "Full-day socialization and play in supervised, climate-controlled environments.",
-    image: daycareImage,
-  },
-  {
-    icon: Sparkles,
-    title: "Spa & Grooming",
-    description: "Premium pampering services from refreshing baths to pawdicures and aromatherapy.",
-    image: spaImage,
+    icon: Briefcase,
+    title: "Strategic Consultancy",
+    description: "Expert guidance on business strategy, organisational development, and operational efficiency to drive growth.",
+    image: consultingImage,
   },
   {
     icon: GraduationCap,
-    title: "Training Programs",
-    description: "Professional obedience and behavior training with certified, positive-reinforcement trainers.",
+    title: "Professional Training",
+    description: "Tailored training programmes that build skills, enhance performance, and empower your workforce.",
+    image: trainingImage,
+  },
+  {
+    icon: FolderKanban,
+    title: "Project Coordination",
+    description: "End-to-end project management ensuring timely delivery, stakeholder alignment, and quality outcomes.",
+    image: projectImage,
+  },
+  {
+    icon: LineChart,
+    title: "Performance Analytics",
+    description: "Data-driven insights and KPI frameworks to measure impact and optimise your operations.",
     image: heroImage,
   },
 ];
@@ -46,7 +46,7 @@ const ServiceCards = () => {
             Our <span className="text-gradient-primary">Services</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Everything your pet needs for the ultimate vacation experience
+            Comprehensive solutions tailored to your business needs
           </p>
         </motion.div>
 
