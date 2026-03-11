@@ -1,0 +1,90 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, X, Phone, PawPrint } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Suites", href: "/suites" },
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
+            <PawPrint className="h-8 w-8 text-accent" />
+            <span className="font-heading text-2xl font-bold text-foreground tracking-tight">
+              Pawington
+            </span>
+          </Link>
+
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a href="tel:5551234567" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Phone className="h-4 w-4" />
+              (555) 123-4567
+            </a>
+            <Button onClick={() => navigate("/pricing")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-6 font-semibold">
+              Book Now
+            </Button>
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 text-foreground"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-background border-t border-border">
+          <div className="container mx-auto px-4 py-4 space-y-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block py-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Button onClick={() => { setIsOpen(false); navigate("/pricing"); }} className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold mt-4">
+              Book Now
+            </Button>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
