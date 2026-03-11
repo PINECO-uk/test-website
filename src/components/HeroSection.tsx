@@ -2,23 +2,21 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
-import heroImage from "@/assets/hero-dog.jpg";
+import heroImage from "@/assets/hero-consultancy.jpg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
     <section className="relative flex items-center overflow-hidden py-32 md:py-40 lg:py-48">
-      {/* Background */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Golden retriever in luxury pet suite"
+          alt="PINECO consultancy team collaborating in a modern office"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-hero-overlay" />
       </div>
 
-      {/* Content */}
       <div className="relative container mx-auto px-4 lg:px-8 pt-20">
         <div className="max-w-2xl">
           <motion.div
@@ -32,7 +30,7 @@ const HeroSection = () => {
                 <Star key={i} className="h-4 w-4 fill-accent text-accent" />
               ))}
             </div>
-            <span className="text-sm font-medium text-accent">4.9/5 from 450+ reviews</span>
+            <span className="text-sm font-medium text-accent">Trusted by 200+ organisations</span>
           </motion.div>
 
           <motion.h1
@@ -41,8 +39,8 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6"
           >
-            A 5-Star Vacation for Your{" "}
-            <span className="text-accent">Best Friend</span>
+            Consultancy, Training &{" "}
+            <span className="text-accent">Project Coordination</span>
           </motion.h1>
 
           <motion.p
@@ -51,8 +49,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/80 mb-10 leading-relaxed max-w-lg"
           >
-            Where Luxury Meets Care — Premium Boarding, Daycare & Spa Services
-            for Your Beloved Companion.
+            Empowering businesses with strategic insights, professional development, and seamless project delivery.
           </motion.p>
 
           <motion.div
@@ -61,8 +58,8 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button onClick={() => navigate("/pricing")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-              Book a Stay
+            <Button onClick={() => navigate("/services")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
+              Our Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -70,13 +67,12 @@ const HeroSection = () => {
               onClick={() => navigate("/contact")}
               className="border-2 border-white/40 text-white bg-white/10 hover:bg-white/20 rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm"
             >
-              Schedule a Tour
+              Schedule a Consultation
             </Button>
           </motion.div>
         </div>
       </div>
 
-      {/* Wave divider */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
           <path

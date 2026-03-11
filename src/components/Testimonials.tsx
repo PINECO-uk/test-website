@@ -4,25 +4,25 @@ import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    pet: "Golden Retriever Luna",
-    text: "Luna had the best time! The webcam let us check in anytime. She didn't want to leave!",
+    name: "Maria K.",
+    role: "CEO, TechVentures Ltd",
+    text: "PINECO transformed our project delivery process. Their strategic approach saved us months and significantly improved our outcomes.",
     rating: 5,
-    initials: "SM",
+    initials: "MK",
   },
   {
-    name: "David K.",
-    pet: "Poodle Max",
-    text: "The staff treated Max like royalty. The luxury suite was worth every penny!",
+    name: "James T.",
+    role: "Director, Nordic Solutions",
+    text: "The training programmes were exceptional — our team's productivity increased by 40% within the first quarter.",
     rating: 5,
-    initials: "DK",
+    initials: "JT",
   },
   {
-    name: "Jessica R.",
-    pet: "Beagle Bella",
-    text: "Bella's been going to daycare for 6 months. She's happier and more social than ever!",
+    name: "Anna L.",
+    role: "COO, GreenBuild Corp",
+    text: "Outstanding project coordination. They kept everything on track and all stakeholders aligned. Truly professional.",
     rating: 5,
-    initials: "JR",
+    initials: "AL",
   },
 ];
 
@@ -46,10 +46,10 @@ const Testimonials = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
-            Happy <span className="text-gradient-primary">Pet Parents</span>
+            Client <span className="text-gradient-primary">Recommendations</span>
           </h2>
           <p className="text-lg text-white/60">
-            See what our guests have to say
+            What our partners say about working with us
           </p>
         </motion.div>
 
@@ -86,14 +86,13 @@ const Testimonials = () => {
                     {testimonials[current].name}
                   </p>
                   <p className="text-sm text-white/60">
-                    {testimonials[current].pet}
+                    {testimonials[current].role}
                   </p>
                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
 
-          {/* Nav */}
           <div className="flex justify-center gap-3 mt-8">
             <button
               onClick={() => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)}

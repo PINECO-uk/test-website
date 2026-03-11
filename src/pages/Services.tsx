@@ -11,7 +11,7 @@ const Services = () => (
         Our <span className="text-gradient-primary">Services</span>
       </h1>
       <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-        From luxury boarding to spa days, we offer everything your pet needs for the ultimate staycation.
+        From strategic consultancy to professional training and project coordination, we provide end-to-end support for your business.
       </p>
     </div>
     <ServiceCards />

@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Clock, Video, Thermometer } from "lucide-react";
+import { ShieldCheck, Target, Users, TrendingUp } from "lucide-react";
 
 const badges = [
   {
     icon: ShieldCheck,
-    title: "Certified Professionals",
-    description: "Certified Pet Care Professionals Since 2015",
+    title: "Certified Experts",
+    description: "Accredited consultants with 15+ years of industry experience",
   },
   {
-    icon: Clock,
-    title: "24/7 Staff & Vet Support",
-    description: "On-Site Staff & Veterinary Support Around the Clock",
+    icon: Target,
+    title: "Results-Driven",
+    description: "Proven track record of delivering measurable business outcomes",
   },
   {
-    icon: Video,
-    title: "Live Webcam Access",
-    description: "Watch Your Pet's Suite in Real-Time From Anywhere",
+    icon: Users,
+    title: "Collaborative Approach",
+    description: "We work alongside your team to build lasting capabilities",
   },
   {
-    icon: Thermometer,
-    title: "Climate-Controlled",
-    description: "Indoor & Outdoor Facilities Maintained at 68-72°F",
+    icon: TrendingUp,
+    title: "Scalable Solutions",
+    description: "Strategies designed to grow with your organisation",
   },
 ];
 

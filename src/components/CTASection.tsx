@@ -14,29 +14,28 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary to-primary-dark p-12 md:p-16 text-center"
         >
-          {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary-foreground/10 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-foreground/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
           <div className="relative z-10">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-              Ready to Book Your Pet's Vacation?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-primary-foreground/80 max-w-xl mx-auto mb-10">
-              Give your best friend the 5-star experience they deserve. Book a tour or make a reservation today.
+              Let's discuss how PINECO can help you achieve your goals. Book a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => navigate("/pricing")} className="bg-white hover:bg-white/90 text-primary rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-                Make a Reservation
+              <Button onClick={() => navigate("/contact")} className="bg-white hover:bg-white/90 text-primary rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
+                Start a Conversation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
                 variant="outline"
-                onClick={() => navigate("/contact")}
+                onClick={() => navigate("/projects")}
                 className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8 py-6 text-lg font-semibold"
               >
                 <CalendarDays className="mr-2 h-5 w-5" />
-                Schedule a Tour
+                View Our Projects
               </Button>
             </div>
           </div>
