@@ -34,11 +34,10 @@ const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold text-primary-foreground mb-4">Services</h4>
             <ul className="space-y-2.5 text-sm">
-              <li>Strategic Consultancy</li>
-              <li>Professional Training</li>
               <li>Project Coordination</li>
-              <li>Performance Analytics</li>
-              <li>Change Management</li>
+              <li>Volunteering Management</li>
+              <li>Training</li>
+              <li>Consulting</li>
             </ul>
           </div>
 
