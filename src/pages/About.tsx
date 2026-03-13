@@ -43,9 +43,9 @@ const About = () => (
                 <p className="text-sm text-muted-foreground font-medium">Your Photo Here</p>
               </div>
             </div>
-            {/* Decorative pine accent */}
+            {/* Decorative pinecone accent */}
             <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-              <TreePine className="h-10 w-10 text-primary" />
+              <img src={pineconeIcon} alt="Pinecone" className="h-10 w-10 object-contain" />
             </div>
           </div>
         </motion.div>
