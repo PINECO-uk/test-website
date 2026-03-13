@@ -36,7 +36,7 @@ const About = () => (
           className="flex justify-center"
         >
           <div className="relative">
-            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-[hsl(var(--pine-brown-light))] border-4 border-[hsl(var(--pine-brown)/0.3)] flex items-center justify-center overflow-hidden shadow-lg">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-[hsl(var(--pine-brown-light))] border-4 border-[hsl(var(--pine-brown)/0.3)] flex items-center justify-center overflow-hidden shadow-xl ring-4 ring-primary/20">
               {/* Replace with actual photo */}
               <div className="text-center p-6">
                 <Users className="h-16 w-16 text-[hsl(var(--pine-brown))] mx-auto mb-3" />
@@ -96,10 +96,6 @@ const About = () => (
           {/* Central trunk line */}
           <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[hsl(var(--pine-brown))] via-primary to-accent rounded-full hidden md:block" />
 
-          {/* Pinecone at top of trunk */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 rounded-full bg-primary/10 z-10 items-center justify-center border-4 border-background">
-            <img src={pineconeIcon} alt="Pinecone" className="h-8 w-8 object-contain" />
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
             {/* Left side: Work Experience */}
